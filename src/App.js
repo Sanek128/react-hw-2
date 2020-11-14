@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Comments from './components/comments/Comments';
+import Posts from './components/posts/Posts';
+import Users from './components/Users/Users';
+import { ApiService } from './data/services/ApiService'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
+  // let apiService = new ApiService();
+
+  return (
+    <div className="d-flex align-items-start">
+           <div className="p-2"><Users/></div>
+           <div className="p-2"><Posts/></div>
+           <div className="p-2"><Comments/></div>
+       </div>
+
+    // <div>
+    //   <Users/>
+    //   <Posts/>
+    //   <Comments/>
+    // </div>
+    );
+  }
+  
+  // <button type="button" class="btn btn-primary">Primary</button>
 export default App;
